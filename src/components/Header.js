@@ -8,9 +8,6 @@ import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import NavItem from "react-bootstrap/NavItem";
-import { LinkContainer } from "react-router-bootstrap";
-
 
 const Header = () => (
     <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
@@ -18,11 +15,7 @@ const Header = () => (
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                {/*<LinkContainer to="/about">*/}
-                {/*    <NavItem>About</NavItem>*/}
-                {/*</LinkContainer>*/}
-                <Link to="/about">About</Link>
+                <Nav.Link as={Link} to="/about" >About</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
